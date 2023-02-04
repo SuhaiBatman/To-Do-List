@@ -1,12 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
+
+const {
+    getAllTodos,
+    postCreateTodo,
+    putUpdateTodo,
+    deleteTodo,
+} = require("../contollers/todo");
+
 /**
  * @route GET api/todo
  * @description Get all todo
  * @access public
  */
-router.get("/");
+router.get("/", getAllTodos);
 
 
 /**
@@ -14,20 +22,20 @@ router.get("/");
  * @description add a new todo
  * @access public
  */
-router.post("/");
+router.post("/",postCreateTodo);
 
 /**
  * @route PUT api/todo/:id
  * @descrption update todo
  * @access public
  */
-router.put("/:id");
+router.put("/:id", putUpdateTodo);
 
 /**
  * @route DELETE api/todo/:id
  * @description delete todo
  * @access public
  */
-router.delete("/:id");
+router.delete("/:id",deleteTodo);
 
 module.exports = router;
