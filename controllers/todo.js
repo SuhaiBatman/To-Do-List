@@ -1,6 +1,6 @@
 const Todo = require("../models/todo");
 
-exports.getAllTodo = (req, res) =>{
+exports.getAllTodos = (req, res) =>{
     Todo.find()
     .then((todo) => res.json(todo))
     .catch((err) =>
