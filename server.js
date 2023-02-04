@@ -6,6 +6,8 @@ const connectDB = require("./config/db");
 
 const app = express();
 
+const todo = require("./routers/todo");
+
 connectDB();
 
 // initialize middleware
