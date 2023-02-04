@@ -7,7 +7,7 @@ const {
     postCreateTodo,
     putUpdateTodo,
     deleteTodo,
-} = require("../contollers/todo");
+} = require("../controllers/todo");
 
 /**
  * @route GET api/todo
